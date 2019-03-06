@@ -1,3 +1,5 @@
+"use strict";
+
 const video = document.querySelector('.player');
 const canvas = document.querySelector('.photo');
 const ctx = canvas.getContext('2d');
@@ -24,7 +26,7 @@ function paintToCanvas() {
         ctx.drawImage(video, 0, 0, width, height);
         
         // take the pixels out
-        let pixel = ctx.getImageData(0, 0, width, height);
+        let pixels = ctx.getImageData(0, 0, width, height);
 
         // mess with them
         //pixels = redEffect(pixels);
